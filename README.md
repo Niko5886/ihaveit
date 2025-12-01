@@ -2,6 +2,12 @@
 
 A modern swipe-based marketplace platform for buying and selling second-hand items, built with vanilla JavaScript.
 
+## 🌐 Live Site
+
+**[Visit ИМАМ ГО →](https://niko5886.github.io/ihaveit/)**
+
+Try out the live demo and experience the swipe-based marketplace!
+
 ## 🌟 Features
 
 - **Swipe Interface** - Tinder-like card swiping mechanism for browsing products
