@@ -4,7 +4,7 @@ A modern swipe-based marketplace platform for buying and selling second-hand ite
 
 ## 🌐 Live Site
 
-**[Visit ИМАМ ГО →](https://niko5886.github.io/ihaveit/)**
+**[Visit ihaveit →](https://niko5886.github.io/ihaveit/)**
 
 Try out the live demo and experience the swipe-based marketplace!
 
