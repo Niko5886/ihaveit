@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Любими - ИМАМ ГО</title>
+  <link rel="stylesheet" href="favorites.css" />
+</head>
+<body>
+  <header class="fav-header">
+    <button class="back-btn" onclick="window.location.href='swipe.html'">←</button>
+    <h1>Любими ❤️</h1>
+  </header>
+  <main class="fav-main">
+    <div id="favoritesList" class="fav-list"></div>
+  <div id="emptyState" class="empty-state">
+      <div class="empty-icon">❤️</div>
+      <h2>Нямаш любими още</h2>
+      <p>Харесай обява (Искам го), за да я запазиш тук.</p>
+      <button class="go-swipe" onclick="window.location.href='swipe.html'">Към обявите</button>
+    </div>
+  </main>
+  <script src="favorites.js"></script>
+</body>
+</html>

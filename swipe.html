@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИМАМ ГО - Swipe платформа</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">ИМАМ ГО 😊</div>
+        <div class="header-icons">
+            <span class="icon">🔔</span>
+            <span class="icon">⚙️</span>
+            <span class="icon">👤</span>
+        </div>
+    </header>
+
+    <!-- Main Swipe Container -->
+    <div class="swipe-container" id="swipeContainer">
+        <!-- Cards will be dynamically added here -->
+    </div>
+
+    <!-- Click/Tap Areas for mouse-only users (do not cover entire area to keep drag working) -->
+    <div class="click-areas" aria-hidden="true">
+        <div class="click-left" id="clickLeft" title="Пропусни (наляво)">
+            <div class="click-badge click-badge--left">
+                <span class="badge-icon">✖</span>
+                <span class="badge-label">Пропусни</span>
+            </div>
+        </div>
+        <div class="click-right" id="clickRight" title="Искам го (надясно)">
+            <div class="click-badge click-badge--right">
+                <span class="badge-icon">❤️</span>
+                <span class="badge-label">Искам го</span>
+            </div>
+        </div>
+    </div>
+
+    <button class="next-button" id="clickUp" title="Следваща (надолу)">
+        <span class="next-icon">⬇️</span>
+        <span class="next-label">Следваща</span>
+    </button>
+
+    <!-- Swipe Indicators -->
+    <div class="swipe-indicators">
+        <div class="swipe-hint left">
+            <div class="swipe-icon">❌</div>
+            <div class="swipe-text">Пропускни</div>
+        </div>
+        <div class="swipe-hint right">
+            <div class="swipe-icon">❤️</div>
+            <div class="swipe-text">Искам го</div>
+        </div>
+        <div class="swipe-hint up">
+            <div class="swipe-icon">⬆️</div>
+            <div class="swipe-text">Следваща</div>
+        </div>
+    </div>
+
+    <!-- Modern Swipe Controls -->
+    <div class="swipe-controls">
+        <!-- Up Arrow -->
+        <button class="control-btn up-btn" id="upBtn" title="Следваща обява">
+            <div class="arrow-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 4L12 20M12 4L6 10M12 4L18 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <span class="control-label">Следваща</span>
+        </button>
+
+        <!-- Left Arrow (Skip) -->
+        <button class="control-btn left-btn" id="leftBtn" title="Пропускни">
+            <div class="arrow-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 12L4 12M4 12L10 18M4 12L10 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="control-icon">❌</div>
+            <span class="control-label">Пропускни</span>
+        </button>
+
+        <!-- Right Arrow (Like) -->
+        <button class="control-btn right-btn" id="rightBtn" title="Искам го">
+            <div class="arrow-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 12L20 12M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="control-icon">❤️</div>
+            <span class="control-label">Искам го</span>
+        </button>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button class="action-btn skip-btn" id="skipBtn">
+            <span class="btn-icon">❌</span>
+        </button>
+        <button class="action-btn like-btn" id="likeBtn">
+            <span class="btn-icon">❤️</span>
+        </button>
+        <button class="action-btn message-btn" id="messageBtn">
+            <span class="btn-icon">💬</span>
+        </button>
+        <button class="action-btn share-btn" id="shareBtn">
+            <span class="btn-icon">📤</span>
+        </button>
+        <button class="action-btn save-btn" id="saveBtn">
+            <span class="btn-icon">🔖</span>
+        </button>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-item active" data-page="home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Начало</span>
+        </div>
+        <div class="nav-item" data-page="favorites">
+            <span class="nav-icon">❤️</span>
+            <span class="nav-label">Любими</span>
+        </div>
+        <div class="nav-item" data-page="add">
+            <span class="nav-icon">➕</span>
+            <span class="nav-label">Добави</span>
+        </div>
+        <div class="nav-item" data-page="messages">
+            <span class="nav-icon">💬</span>
+            <span class="nav-label">Съобщения</span>
+        </div>
+        <div class="nav-item" data-page="profile">
+            <span class="nav-icon">👤</span>
+            <span class="nav-label">Профил</span>
+        </div>
+    </nav>
+
+    <!-- Loading Indicator -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

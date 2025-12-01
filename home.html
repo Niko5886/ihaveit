@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИМАМ ГО - Начало</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <button class="back-btn" onclick="window.location.href='swipe.html'">
+            <span>←</span>
+        </button>
+        <div class="logo">ИМАМ ГО 😊</div>
+        <div class="header-icons">
+            <span class="icon">🔔</span>
+            <span class="icon">👤</span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Action Selection -->
+        <div id="actionSelection" class="action-selection">
+            <h1 class="page-title">Какво искаш да правиш?</h1>
+            
+            <div class="action-cards">
+                <div class="action-card buy-card" onclick="selectAction('buy')">
+                    <div class="action-icon">🛍️</div>
+                    <h2>Купувам</h2>
+                    <p>Разгледай продукти и намери това, което ти трябва</p>
+                </div>
+                
+                <div class="action-card sell-card" onclick="selectAction('sell')">
+                    <div class="action-icon">💰</div>
+                    <h2>Продавам</h2>
+                    <p>Добави обява и продай ненужните си вещи</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories Section (Hidden by default) -->
+        <div id="categoriesSection" class="categories-section hidden">
+            <div class="section-header">
+                <button class="back-btn-small" onclick="showActionSelection()">← Назад</button>
+                <h2 id="categoryTitle" class="category-title">Избери категория</h2>
+            </div>
+
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

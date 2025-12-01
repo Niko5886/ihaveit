@@ -1,0 +1,205 @@
+<!DOCTYPE html><!DOCTYPE html>
+
+<html lang="bg"><html lang="bg">
+
+<head><head>
+
+    <meta charset="UTF-8">    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="refresh" content="0;url=welcome.html">    <title>ИМАМ ГО - Swipe платформа</title>
+
+    <title>ИМАМ ГО - Зареждане...</title>    <link rel="stylesheet" href="style.css">
+
+    <style></head>
+
+        body {<body>
+
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;    <!-- Header -->
+
+            display: flex;    <header class="header">
+
+            justify-content: center;        <div class="logo">ИМАМ ГО 😊</div>
+
+            align-items: center;        <div class="header-icons">
+
+            height: 100vh;            <span class="icon">🔔</span>
+
+            margin: 0;            <span class="icon">⚙️</span>
+
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);            <span class="icon">👤</span>
+
+            color: #2C3E50;        </div>
+
+        }    </header>
+
+        .loading {
+
+            text-align: center;    <!-- Main Swipe Container -->
+
+        }    <div class="swipe-container" id="swipeContainer">
+
+        .loading h1 {        <!-- Cards will be dynamically added here -->
+
+            font-size: 48px;    </div>
+
+            margin: 0 0 20px 0;
+
+            color: #FFB800;    <!-- Click/Tap Areas for mouse-only users (do not cover entire area to keep drag working) -->
+
+        }    <div class="click-areas" aria-hidden="true">
+
+        .loading p {        <div class="click-left" id="clickLeft" title="Пропусни (наляво)">
+
+            font-size: 18px;            <div class="click-badge click-badge--left">
+
+            color: #4ECDC4;                <span class="badge-icon">✖</span>
+
+        }                <span class="badge-label">Пропусни</span>
+
+        .spinner {            </div>
+
+            width: 50px;        </div>
+
+            height: 50px;        <div class="click-right" id="clickRight" title="Искам го (надясно)">
+
+            margin: 20px auto;            <div class="click-badge click-badge--right">
+
+            border: 4px solid rgba(255, 184, 0, 0.3);                <span class="badge-icon">❤️</span>
+
+            border-top-color: #FFB800;                <span class="badge-label">Искам го</span>
+
+            border-radius: 50%;            </div>
+
+            animation: spin 1s linear infinite;        </div>
+
+        }    </div>
+
+        @keyframes spin {
+
+            to { transform: rotate(360deg); }    <button class="next-button" id="clickUp" title="Следваща (надолу)">
+
+        }        <span class="next-icon">⬇️</span>
+
+    </style>        <span class="next-label">Следваща</span>
+
+</head>    </button>
+
+<body>
+
+    <div class="loading">    <!-- Swipe Indicators -->
+
+        <h1>ИМАМ ГО 😊</h1>    <div class="swipe-indicators">
+
+        <div class="spinner"></div>        <div class="swipe-hint left">
+
+        <p>Зареждане...</p>            <div class="swipe-icon">❌</div>
+
+    </div>            <div class="swipe-text">Пропускни</div>
+
+    <script>        </div>
+
+        // Fallback redirect if meta refresh doesn't work        <div class="swipe-hint right">
+
+        setTimeout(() => {            <div class="swipe-icon">❤️</div>
+
+            window.location.href = 'welcome.html';            <div class="swipe-text">Искам го</div>
+
+        }, 100);        </div>
+
+    </script>        <div class="swipe-hint up">
+
+</body>            <div class="swipe-icon">⬆️</div>
+
+</html>            <div class="swipe-text">Следваща</div>
+
+        </div>
+    </div>
+
+    <!-- Modern Swipe Controls -->
+    <div class="swipe-controls">
+        <!-- Up Arrow -->
+        <button class="control-btn up-btn" id="upBtn" title="Следваща обява">
+            <div class="arrow-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 4L12 20M12 4L6 10M12 4L18 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <span class="control-label">Следваща</span>
+        </button>
+
+        <!-- Left Arrow (Skip) -->
+        <button class="control-btn left-btn" id="leftBtn" title="Пропускни">
+            <div class="arrow-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 12L4 12M4 12L10 18M4 12L10 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="control-icon">❌</div>
+            <span class="control-label">Пропускни</span>
+        </button>
+
+        <!-- Right Arrow (Like) -->
+        <button class="control-btn right-btn" id="rightBtn" title="Искам го">
+            <div class="arrow-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 12L20 12M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="control-icon">❤️</div>
+            <span class="control-label">Искам го</span>
+        </button>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button class="action-btn skip-btn" id="skipBtn">
+            <span class="btn-icon">❌</span>
+        </button>
+        <button class="action-btn like-btn" id="likeBtn">
+            <span class="btn-icon">❤️</span>
+        </button>
+        <button class="action-btn message-btn" id="messageBtn">
+            <span class="btn-icon">💬</span>
+        </button>
+        <button class="action-btn share-btn" id="shareBtn">
+            <span class="btn-icon">📤</span>
+        </button>
+        <button class="action-btn save-btn" id="saveBtn">
+            <span class="btn-icon">🔖</span>
+        </button>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-item active" data-page="home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Начало</span>
+        </div>
+        <div class="nav-item" data-page="favorites">
+            <span class="nav-icon">❤️</span>
+            <span class="nav-label">Любими</span>
+        </div>
+        <div class="nav-item" data-page="add">
+            <span class="nav-icon">➕</span>
+            <span class="nav-label">Добави</span>
+        </div>
+        <div class="nav-item" data-page="messages">
+            <span class="nav-icon">💬</span>
+            <span class="nav-label">Съобщения</span>
+        </div>
+        <div class="nav-item" data-page="profile">
+            <span class="nav-icon">👤</span>
+            <span class="nav-label">Профил</span>
+        </div>
+    </nav>
+
+    <!-- Loading Indicator -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

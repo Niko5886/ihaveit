@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИМАМ ГО - Регистрация</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-card">
+            <!-- Header -->
+            <div class="header-section">
+                <h1 class="logo">ИМАМ ГО 😊</h1>
+                <p class="subtitle">Създай своя профил</p>
+            </div>
+
+            <!-- Registration Form -->
+            <form id="registerForm" class="register-form">
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Имейл адрес *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="example@email.com"
+                        required
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="firstName">Първо име *</label>
+                    <input 
+                        type="text" 
+                        id="firstName" 
+                        name="firstName" 
+                        placeholder="Иван"
+                        required
+                    >
+                    <span class="error-message" id="firstNameError"></span>
+                </div>
+
+                <!-- Middle Name -->
+                <div class="form-group">
+                    <label for="middleName">Презиме *</label>
+                    <input 
+                        type="text" 
+                        id="middleName" 
+                        name="middleName" 
+                        placeholder="Петров"
+                        required
+                    >
+                    <span class="error-message" id="middleNameError"></span>
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label for="lastName">Фамилия *</label>
+                    <input 
+                        type="text" 
+                        id="lastName" 
+                        name="lastName" 
+                        placeholder="Иванов"
+                        required
+                    >
+                    <span class="error-message" id="lastNameError"></span>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label>Пол *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="male" required>
+                            <span class="radio-custom"></span>
+                            Мъж
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="female" required>
+                            <span class="radio-custom"></span>
+                            Жена
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="other" required>
+                            <span class="radio-custom"></span>
+                            Друго
+                        </label>
+                    </div>
+                    <span class="error-message" id="genderError"></span>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Телефонен номер *</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="+359 888 123 456"
+                        required
+                    >
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address">Точен адрес *</label>
+                    <input 
+                        type="text" 
+                        id="address" 
+                        name="address" 
+                        placeholder="ул. Витошка 15, София"
+                        required
+                    >
+                    <span class="error-message" id="addressError"></span>
+                </div>
+
+                <!-- City -->
+                <div class="form-group">
+                    <label for="city">Град *</label>
+                    <select id="city" name="city" required>
+                        <option value="">Избери град</option>
+                        <option value="София">София</option>
+                        <option value="Пловдив">Пловдив</option>
+                        <option value="Варна">Варна</option>
+                        <option value="Бургас">Бургас</option>
+                        <option value="Русе">Русе</option>
+                        <option value="Стара Загора">Стара Загора</option>
+                        <option value="Плевен">Плевен</option>
+                        <option value="Сливен">Сливен</option>
+                        <option value="Добрич">Добрич</option>
+                        <option value="Друг">Друг</option>
+                    </select>
+                    <span class="error-message" id="cityError"></span>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Парола *</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Минимум 8 символа"
+                        required
+                        minlength="8"
+                    >
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirmPassword">Потвърди парола *</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword" 
+                        placeholder="Повтори паролата"
+                        required
+                        minlength="8"
+                    >
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">
+                            Приемам <a href="#" class="link">Общите условия</a> и 
+                            <a href="#" class="link">Политиката за поверителност</a>
+                        </span>
+                    </label>
+                    <span class="error-message" id="termsError"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Регистрирай се</span>
+                    <span class="btn-icon">✓</span>
+                </button>
+
+                <!-- Already have account -->
+                <div class="login-link">
+                    Вече имаш профил? <a href="login.html" class="link">Влез тук</a>
+                </div>
+            </form>
+
+            <!-- Success Message (hidden by default) -->
+            <div id="successMessage" class="success-message hidden">
+                <div class="success-icon">✉️</div>
+                <h2>Успешна регистрация!</h2>
+                <p>Твоят профил е създаден успешно на <strong id="userEmail"></strong></p>
+                <p class="small-text">За демонстрационни цели, профилът ти е автоматично активиран.</p>
+                <div class="countdown-text">
+                    <p>Пренасочване след <strong id="countdown">3</strong> секунди...</p>
+                </div>
+                <button id="goToAppBtn" class="cta-btn">Започни сега</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
